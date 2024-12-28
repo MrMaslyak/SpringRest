@@ -11,8 +11,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@AllArgsConstructor
 public class ProductController {
+
+    public ProductController(ProductService productService) {
+        this.productService = productService;
+    }
 
     private final ProductService productService;
 
